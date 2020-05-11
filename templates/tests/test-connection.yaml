@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "postgresql-psl.fullname" . }}-test-connection"
+  labels:
+    {{- include "postgresql-psl.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "postgresql-psl.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
