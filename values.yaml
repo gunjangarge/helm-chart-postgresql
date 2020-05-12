@@ -50,7 +50,7 @@ readinessprobe:
   periodSeconds: 60
 
 dbconfig:
-  postgresPassword: "abc123"
+  #postgresPassword: "abc123"
   postgresUser: "abc"
   postgresDB: "abcdb"
   postgresDBDataDir: "/data/postgresql"
