@@ -6,8 +6,8 @@
 
 ## Commands 
 ```
-helm lint postgresql-psl
-helm package postgresql-psl
+helm lint helm-chart-postgresql
+helm package helm-chart-postgresql
 helm install postgresql-psl postgresql-psl-0.1.0.tgz
 ```
 ## Connect to database
