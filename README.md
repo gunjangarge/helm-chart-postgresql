@@ -43,3 +43,8 @@ abcdb=# select * from users;
 abcdb=# 
 abcdb=# \q
 ```
+
+## Cleanup
+```
+helm uninstall postgresql-psl
+```
